@@ -23,24 +23,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "vscode.css-language-features",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
-  },
-  "[liquid]": {
-    "editor.defaultFormatter": "Shopify.theme-check-vscode",
-    "editor.formatOnSave": true
-  },
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[sql]": {
-    "editor.formatOnSave": false
   },
   "[jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
