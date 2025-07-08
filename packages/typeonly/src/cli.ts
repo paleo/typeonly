@@ -225,7 +225,7 @@ async function createRtoJsonFiles(options: OptionsObject) {
 
 function getTypingFilesInDir(dir: string): string[] {
   const files = readdirSync(dir);
-  return files.filter((fileName) => fileName.endsWith(".d.ts"));
+  return files.filter((fileName) => fileName.endsWith(".d.ts") || fileName.endsWith(".ts"));
 }
 
 function normalizeModulePaths(files: string[], sourceDir: string): string[] {

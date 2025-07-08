@@ -25,7 +25,8 @@ export default class AstImportTool {
   ) {}
 
   addImport(astNode: AstImport) {
-    const ifm = this.getImportedFromModule(astNode.from);
+    const from = removeImportExtensions(astNode.from);
+    const ifm = this.getImportedFromModule(from);
     if (astNode.whichImport === "namespaced") this.addNamespacedImport(astNode.asNamespace, ifm);
     else {
       if (astNode.namedMembers) {
@@ -35,7 +36,8 @@ export default class AstImportTool {
   }
 
   addInlineImport(astNode: AstInlineImportType) {
-    const ifm = this.getImportedFromModule(astNode.from);
+    const from = removeImportExtensions(astNode.from);
+    const ifm = this.getImportedFromModule(from);
     ifm.inlineMembers.add(astNode.exportedName);
   }
 
@@ -119,4 +121,14 @@ export default class AstImportTool {
         throw new Error(`Module '${factory.getModulePath()}' has no exported member '${name}'.`);
     }
   }
+}
+
+function removeImportExtensions(path: string): string {
+  const extensions = [".d.ts", ".ts", ".js"];
+  for (const extension of extensions) {
+    if (path.endsWith(extension)) {
+      return path.substring(0, path.length - extension.length);
+    }
+  }
+  return path;
 }

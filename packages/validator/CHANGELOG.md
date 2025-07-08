@@ -1,5 +1,16 @@
 # @typeonly/validator
 
+## 1.1.0
+
+### Minor Changes
+
+- Accept imported file extensions
+
+### Patch Changes
+
+- Updated dependencies
+  - @typeonly/loader@1.1.0
+
 ## 1.0.1
 
 ### Patch Changes
