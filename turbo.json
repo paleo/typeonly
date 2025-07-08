@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "clear": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["clear", "^build"],
+      "outputs": ["dist/**", "antlr-parser/**"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "cache": false
+    },
+    "lint": {
+      "cache": false
+    },
+    "tsc": {
+      "dependsOn": ["clear", "^build"],
+      "outputs": ["dist/**"]
+    },
+    "tsc:watch": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

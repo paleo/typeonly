@@ -1,7 +1,7 @@
 import type { AstImport, AstInlineImportType } from "../ast.d.ts";
 import type { RtoImport, RtoNamespacedImport } from "../rto.d.ts";
-import type RtoModuleFactory from "./RtoModuleFactory.js";
 import type { RtoModuleLoader } from "./internal-types.js";
+import type RtoModuleFactory from "./RtoModuleFactory.js";
 
 export interface ImportRef {
   refName: string;

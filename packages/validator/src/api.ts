@@ -1,9 +1,9 @@
 import {
   type AsyncReadModulesOptions,
-  type Modules,
-  type SyncReadModulesOptions,
   isSyncReadModulesOptions,
   loadModules,
+  type Modules,
+  type SyncReadModulesOptions,
 } from "@typeonly/loader";
 import Validator from "./Validator.js";
 

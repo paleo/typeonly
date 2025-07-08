@@ -1,4 +1,4 @@
-import { readFile, readdir } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import Project from "./loader/Project.js";
 import type { Modules, Type } from "./typeonly-loader.d.ts";

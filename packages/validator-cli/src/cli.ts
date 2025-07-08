@@ -2,10 +2,9 @@
 import { readFileSync } from "node:fs";
 import { basename, dirname } from "node:path";
 import { createValidator } from "@typeonly/validator";
-import { type RtoModules, generateRtoModules } from "typeonly";
-
 import commandLineArgs from "command-line-args";
 import commandLineUsage from "command-line-usage";
+import { generateRtoModules, type RtoModules } from "typeonly";
 
 process.on("uncaughtException", (err) => {
   console.error("uncaughtException", err);
@@ -239,7 +238,7 @@ function readJsonFileSync(options: OptionsObject): unknown {
   try {
     const data = readFileSync(fileToValidate, encoding);
     return JSON.parse(data);
-  } catch (err) {
+  } catch {
     throw new InvalidArgumentError(`Cannot read file: ${fileToValidate}`);
   }
 }

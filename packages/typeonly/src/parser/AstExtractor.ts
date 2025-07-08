@@ -27,12 +27,12 @@ import type {
   TypeOnlyAst,
 } from "../ast.d.ts";
 import { assertExists } from "../helpers/js-lib.js";
+import type { AntlrRuleContext } from "./antlr4-defs.d.ts";
 import CommentGrabber, {
   type CommentParsingContext,
   type GrabbedComment,
   type GrabbedCommentsResult,
 } from "./CommentGrabber.js";
-import type { AntlrRuleContext } from "./antlr4-defs.d.ts";
 
 const TypeOnlyParserListener = (
   await import("../../antlr-parser/TypeOnlyParserListener.js" as string)
