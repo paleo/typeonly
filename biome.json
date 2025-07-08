@@ -10,8 +10,7 @@
     "rules": {
       "recommended": true,
       "suspicious": {
-        "noExplicitAny": "off",
-        "useValidTypeof": "off"
+        "noExplicitAny": "off"
       },
       "complexity": {
         "noForEach": "off",
@@ -28,7 +27,20 @@
         "noConstantCondition": "off",
         "noSwitchDeclarations": "off",
         "useExhaustiveDependencies": "off",
-        "useImportExtensions": "error"
+        "useImportExtensions": "error",
+        "useValidTypeof": "off"
+      },
+      "style": {
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
       }
     }
   },
@@ -40,10 +52,16 @@
     "lineWidth": 100
   },
   "files": {
-    "include": ["*.ts", "*.json"],
-    "ignore": ["dist", "node_modules", "scripts/declarations"]
+    "includes": ["**/*.ts", "**/*.json", "!**/dist", "!**/node_modules", "!**/scripts/declarations"]
   },
-  "organizeImports": {
-    "enabled": true
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": { "organizeImports": "off" }
+    }
   }
 }

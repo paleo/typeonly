@@ -40,7 +40,7 @@ export interface ParsedExternalModuleName {
 }
 
 export function parseExternalModuleName(modulePath: string): ParsedExternalModuleName | undefined {
-  const result = /^((?:@[a-z0-9-~][a-z0-9-\._~]*\/)?[a-z0-9-~][a-z0-9-\._~]*)(\/.+)?$/.exec(
+  const result = /^((?:@[a-z0-9-~][a-z0-9-._~]*\/)?[a-z0-9-~][a-z0-9-._~]*)(\/.+)?$/.exec(
     modulePath,
   );
   if (!result) return;

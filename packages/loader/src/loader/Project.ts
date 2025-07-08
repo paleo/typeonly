@@ -46,7 +46,7 @@ export default class Project {
   private getModuleFactory(relPath: RelativeModulePath): ModuleFactory {
     const modulePath = toModulePath({
       ...relPath,
-      removeExtensions: [".rto.json"],
+      removeExtensions: [".rto.json", ".d.ts", ".ts", ".js"],
     });
     const factory = this.factories.get(modulePath);
     if (!factory) throw new Error(`Unknown module: ${modulePath}`);
@@ -56,7 +56,7 @@ export default class Project {
   private async loadRtoModule(relPath: RelativeModulePath) {
     const modulePath = toModulePath({
       ...relPath,
-      removeExtensions: [".rto.json"],
+      removeExtensions: [".rto.json", ".d.ts", ".ts", ".js"],
     });
     let factory = this.factories.get(modulePath);
     if (!factory) {
@@ -81,7 +81,7 @@ export default class Project {
   private loadRtoModuleSync(relPath: RelativeModulePath) {
     const modulePath = toModulePath({
       ...relPath,
-      removeExtensions: [".rto.json"],
+      removeExtensions: [".rto.json", ".d.ts", ".ts", ".js"],
     });
     let factory = this.factories.get(modulePath);
     if (!factory) {

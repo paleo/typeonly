@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
-import { basename, dirname, join, parse } from "node:path";
 import commandLineArgs from "command-line-args";
 import commandLineUsage from "command-line-usage";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { basename, dirname, join, parse } from "node:path";
 import { generateRtoModules, parseTypeOnly } from "./api.js";
 import type { TypeOnlyAst } from "./ast.d.ts";
 import { ensureDirectory } from "./rto-factory/ProjectInputOutput.js";
@@ -152,7 +152,7 @@ function createAstJsonFile(file: string, options: OptionsObject) {
   let source: string;
   try {
     source = readFileSync(f, { encoding });
-  } catch (err) {
+  } catch {
     throw new InvalidArgumentError(`Cannot read file: ${f}`);
   }
 
@@ -225,7 +225,7 @@ async function createRtoJsonFiles(options: OptionsObject) {
 
 function getTypingFilesInDir(dir: string): string[] {
   const files = readdirSync(dir);
-  return files.filter((fileName) => fileName.endsWith(".d.ts"));
+  return files.filter((fileName) => fileName.endsWith(".d.ts") || fileName.endsWith(".ts"));
 }
 
 function normalizeModulePaths(files: string[], sourceDir: string): string[] {

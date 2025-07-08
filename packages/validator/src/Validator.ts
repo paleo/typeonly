@@ -531,13 +531,13 @@ export default class Validator {
     return { valid: false, unmatchs: [{ type, val, cause }] };
   }
 
-  private checkGenericInstance(type: GenericInstance, val: unknown): InternalResult {
+  private checkGenericInstance(_type: GenericInstance, _val: unknown): InternalResult {
     // TODO checkGenericInstance
-    throw new Error("Validateing of generic instance is not implemented.");
+    throw new Error("Generic instance validating is not implemented.");
   }
 
-  private checkGenericParameterName(type: GenericParameterName, val: unknown): InternalResult {
+  private checkGenericParameterName(_type: GenericParameterName, _val: unknown): InternalResult {
     // TODO checkGenericParameterName
-    throw new Error("Validateing of generic parameter name is not implemented.");
+    throw new Error("Generic parameter validating is not implemented.");
   }
 }

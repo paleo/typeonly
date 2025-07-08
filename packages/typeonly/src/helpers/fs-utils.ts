@@ -1,4 +1,4 @@
-import { type MakeDirectoryOptions, existsSync, mkdirSync, promises } from "node:fs";
+import { existsSync, type MakeDirectoryOptions, mkdirSync, promises } from "node:fs";
 
 const { access } = promises;
 

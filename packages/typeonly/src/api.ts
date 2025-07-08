@@ -1,13 +1,13 @@
 import type { TypeOnlyAst } from "./ast.d.ts";
 import { parseTypeOnlyToAst } from "./parser/parse-typeonly.js";
+import type { RtoModule, RtoModules } from "./rto.d.ts";
 import {
+  makeReadSourceFileAstProvider,
   RtoProjectOutput,
   type WriteRtoFilesOptions,
-  makeReadSourceFileAstProvider,
 } from "./rto-factory/ProjectInputOutput.js";
 import RtoModuleFactory from "./rto-factory/RtoModuleFactory.js";
 import RtoProject from "./rto-factory/RtoProject.js";
-import type { RtoModule, RtoModules } from "./rto.d.ts";
 
 export interface ParseTypeOnlyOptions {
   source: string;

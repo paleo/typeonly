@@ -1,5 +1,17 @@
 # @typeonly/validator-cli
 
+## 1.1.0
+
+### Minor Changes
+
+- Accept imported file extensions
+
+### Patch Changes
+
+- Updated dependencies
+  - @typeonly/validator@1.1.0
+  - typeonly@1.1.0
+
 ## 1.0.1
 
 ### Patch Changes

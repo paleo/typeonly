@@ -1,6 +1,6 @@
 {
   "name": "@typeonly/validator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "An API to validate JSON data or JavaScript objects, using TypeScript typing definitions.",
   "author": "Paroi Team",
   "scripts": {
@@ -8,21 +8,21 @@
     "clear": "rimraf dist/* scripts/declarations/*",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
-    "bundle-tsd": "node scripts/bundle-tsd",
+    "bundle-tsd": "node scripts/bundle-tsd.js",
     "build": "npm run clear && npm run tsc && npm run bundle-tsd",
-    "lint": "biome check . --json-formatter-enabled=false --organize-imports-enabled=false",
+    "lint": "biome check . --json-formatter-enabled=false",
     "test:watch": "vitest",
     "test": "vitest run"
   },
   "dependencies": {
-    "@typeonly/loader": "^1.0.1"
+    "@typeonly/loader": "^1.1.0"
   },
   "devDependencies": {
-    "@types/node": "22",
+    "@types/node": "^24.0.10",
     "rimraf": "^6.0.1",
-    "typeonly": "^1.0.1",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.5"
+    "typeonly": "^1.1.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "type": "module",
   "main": "dist/api.js",
@@ -37,5 +37,8 @@
     "typescript",
     "json",
     "validation"
+  ],
+  "files": [
+    "dist"
   ]
 }

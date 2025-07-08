@@ -3,18 +3,22 @@
   "version": "0.0.0",
   "author": "Paroi Team",
   "private": true,
+  "packageManager": "npm@11.3.0",
   "scripts": {
-    "clear": "npm run clear --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present",
+    "clear": "turbo clear",
+    "build": "turbo build",
+    "build:force": "turbo build --force",
+    "test": "turbo test",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --fix",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish"
   },
   "devDependencies": {
-    "@biomejs/biome": "~1.9.4",
-    "@changesets/cli": "~2.27.12"
+    "@biomejs/biome": "2.0.6",
+    "@changesets/cli": "^2.29.5",
+    "turbo": "^2.5.4"
   },
   "workspaces": [
     "packages/typeonly",
