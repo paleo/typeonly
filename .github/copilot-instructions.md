@@ -1,1 +1,1 @@
-[Read the instructions](../CLAUDE.md)
+[Read these instructions](../CLAUDE.md) ENTIRELY

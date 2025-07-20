@@ -5,3 +5,5 @@ dist
 !.vscode/settings.example.json
 /.DS_Store
 .turbo
+_local
+_plans

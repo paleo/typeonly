@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { readFileSync } from "node:fs";
-import { basename, dirname } from "node:path";
 import { createValidator } from "@typeonly/validator";
 import commandLineArgs from "command-line-args";
 import commandLineUsage from "command-line-usage";
+import { readFileSync } from "node:fs";
+import { basename, dirname } from "node:path";
 import { generateRtoModules, type RtoModules } from "typeonly";
 
 process.on("uncaughtException", (err) => {
@@ -246,7 +246,7 @@ function readJsonFileSync(options: OptionsObject): unknown {
 function normalizeModulePath(file: string, sourceDir: string): string {
   const prefix = `${sourceDir}/`.replace(/\\/g, "/");
   let f = file.replace(/\\/g, "/");
-  if (f.startsWith(prefix)) f = `./${f.substr(prefix.length)}`;
+  if (f.startsWith(prefix)) f = `./${f.substring(prefix.length)}`;
   else if (!f.startsWith("./") && !f.startsWith("../")) f = `./${f}`;
   return f;
 }
