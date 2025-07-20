@@ -20,12 +20,12 @@ export function toModulePath(options: ToModulePathOptions): string {
     throw new Error("Module path must start with './' or '../'");
   let parentDir = options.relativeToModule ? dirname(options.relativeToModule) : ".";
   while (true) {
-    if (from.startsWith("./")) from = from.substr(2);
+    if (from.startsWith("./")) from = from.substring(2);
     else if (from.startsWith("../")) {
       const newDir = dirname(parentDir);
       if (newDir === parentDir) break;
       parentDir = newDir;
-      from = from.substr(3);
+      from = from.substring(3);
     } else break;
   }
   if (from.startsWith("../")) return normalize(from);
@@ -85,7 +85,7 @@ async function findParentPackageDir(dir: string): Promise<string | undefined> {
 
 function removeExtensions(path: string, extensions: string[]): string {
   for (const extension of extensions) {
-    if (path.endsWith(extension)) return path.substr(0, path.length - extension.length);
+    if (path.endsWith(extension)) return path.substring(0, path.length - extension.length);
   }
   return path;
 }

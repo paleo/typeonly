@@ -294,7 +294,9 @@ function formatMultiLineComment(
   const length = stop - start - 3;
   if (length <= 0) return { doc: false, text: "" };
   const doc = mode !== "asInline" && source[start + 2] === "*";
-  const raw = source.substr(doc ? start + 3 : start + 2, doc ? length - 1 : length);
+  const startPos = doc ? start + 3 : start + 2;
+  const endPos = startPos + (doc ? length - 1 : length);
+  const raw = source.slice(startPos, endPos);
 
   let lines = raw.split("\n");
 

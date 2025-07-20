@@ -1,5 +1,11 @@
 # typeonly
 
+## 1.1.1
+
+### Patch Changes
+
+- 5fdcb53: Fixed deprecated "substr" (tech-only)
+
 ## 1.1.0
 
 ### Minor Changes

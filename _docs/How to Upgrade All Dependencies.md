@@ -1,4 +1,4 @@
-# Upgrading All Dependencies
+# How to Upgrade All Dependencies
 
 Use this command:
 

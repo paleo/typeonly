@@ -1,5 +1,13 @@
 # @typeonly/validator-cli
 
+## 1.1.1
+
+### Patch Changes
+
+- 5fdcb53: Fixed deprecated "substr" (tech-only)
+- Updated dependencies [5fdcb53]
+  - typeonly@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
