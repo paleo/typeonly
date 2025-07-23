@@ -118,7 +118,7 @@ function printHelp() {
       optionList: optionDefinitions,
     },
     {
-      content: "Project home: {underline https://github.com/paroi-tech/typeonly}",
+      content: "Project home: {underline https://github.com/paleo/typeonly}",
     },
   ];
   const usage = commandLineUsage(sections);

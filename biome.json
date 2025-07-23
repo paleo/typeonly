@@ -52,7 +52,13 @@
     "lineWidth": 100
   },
   "files": {
-    "includes": ["**/*.ts", "**/*.json", "!**/dist", "!**/node_modules", "!**/scripts/declarations"]
+    "includes": [
+      "**/*.ts",
+      "**/*.json",
+      "!**/dist/**",
+      "!**/node_modules/**",
+      "!**/scripts/declarations/**"
+    ]
   },
   "vcs": {
     "enabled": true,

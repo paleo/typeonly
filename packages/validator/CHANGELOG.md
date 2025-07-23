@@ -1,5 +1,13 @@
 # @typeonly/validator
 
+## 1.1.1
+
+### Patch Changes
+
+- 3ee5c26: Updated documentation after moving the repository
+- Updated dependencies [3ee5c26]
+  - @typeonly/loader@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

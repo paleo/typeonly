@@ -1,9 +1,9 @@
 # TypeOnly
 
-[![Build Status](https://travis-ci.com/paroi-tech/typeonly.svg?branch=master)](https://travis-ci.com/paroi-tech/typeonly)
+[![Build Status](https://travis-ci.com/paleo/typeonly.svg?branch=master)](https://travis-ci.com/paleo/typeonly)
 [![npm](https://img.shields.io/npm/dm/typeonly)](https://www.npmjs.com/package/typeonly)
 ![Type definitions](https://img.shields.io/npm/types/typeonly)
-[![GitHub](https://img.shields.io/github/license/paroi-tech/typeonly)](https://github.com/paroi-tech/typeonly)
+[![GitHub](https://img.shields.io/github/license/paleo/typeonly)](https://github.com/paleo/typeonly)
 
 A lightweight library for validating JSON data using TypeScript type definitions.
 

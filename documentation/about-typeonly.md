@@ -2,7 +2,7 @@
 
 ## What is TypeOnly?
 
-TypeOnly aims to be the pure typing part of TypeScript. See also: a [detailed description of the language](https://github.com/paroi-tech/typeonly/blob/master/typeonly/typeonly-language.md).
+TypeOnly aims to be the pure typing part of TypeScript. See also: a [detailed description of the language](https://github.com/paleo/typeonly/blob/master/typeonly/typeonly-language.md).
 
 TypeOnly is a new language but not a new syntax. TypeOnly aims to be and remain a strict subset of TypeScript: any code that compiles with TypeOnly will also compile with TypeScript. It is the "pure typing" part of TypeScript: only `interface` and `type` definitions.
 
@@ -24,11 +24,11 @@ The TypeOnly parser is implemented from scratch and does not require TypeScript 
 
 There are three packages built on top of TypeOnly.
 
-How to **load typing metadata at runtime**: use the package [@typeonly/loader](https://github.com/paroi-tech/typeonly/tree/master/packages/loader).
+How to **load typing metadata at runtime**: use the package [@typeonly/loader](https://github.com/paleo/typeonly/tree/master/packages/loader).
 
-How to **validate JSON data from the command line**: use the package [@typeonly/validator-cli](https://github.com/paroi-tech/typeonly/tree/master/packages/validator-cli).
+How to **validate JSON data from the command line**: use the package [@typeonly/validator-cli](https://github.com/paleo/typeonly/tree/master/packages/validator-cli).
 
-How to **validate JSON data or a JavaScript object using an API**: use the package [@typeonly/validator](https://github.com/paroi-tech/typeonly/tree/master/packages/validator).
+How to **validate JSON data or a JavaScript object using an API**: use the package [@typeonly/validator](https://github.com/paleo/typeonly/tree/master/packages/validator).
 
 ## Known Limitations
 

@@ -1,6 +1,6 @@
 {
   "name": "@typeonly/loader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Brings types and interfaces from TypeScript at runtime.",
   "author": "Paroi Team",
   "scripts": {
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/node": "^24.0.10",
     "rimraf": "^6.0.1",
-    "typeonly": "^1.1.0",
+    "typeonly": "^1.1.2",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
@@ -26,9 +26,9 @@
   "types": "dist/loader.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paroi-tech/typeonly.git"
+    "url": "git+https://github.com/paleo/typeonly.git"
   },
-  "homepage": "https://github.com/paroi-tech/typeonly/tree/master/packages/loader",
+  "homepage": "https://github.com/paleo/typeonly/tree/master/packages/loader",
   "license": "CC0-1.0",
   "keywords": [
     "typescript",

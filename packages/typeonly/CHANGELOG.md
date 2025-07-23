@@ -1,5 +1,11 @@
 # typeonly
 
+## 1.1.2
+
+### Patch Changes
+
+- 3ee5c26: Updated documentation after moving the repository
+
 ## 1.1.1
 
 ### Patch Changes
