@@ -1,7 +1,5 @@
 # Monorepo for TypeOnly
 
-[![Build Status](https://travis-ci.com/paleo/typeonly.svg?branch=master)](https://travis-ci.com/paleo/typeonly)
-
 **TypeOnly** is a lightweight validation library that uses TypeScript type definitions to validate JSON data. **[Learn more about TypeOnly here](https://github.com/paleo/typeonly/tree/master/packages/typeonly)**.
 
 ## Projects
@@ -37,6 +35,10 @@ With VS Code, our recommanded plugins are:
 ## Publish
 
 ```sh
+npm run changeset
+npm run changeset:version
+npm i
+
 npm run build
 (cd packages/typeonly && npm publish)
 (cd packages/loader && npm publish)

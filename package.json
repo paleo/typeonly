@@ -12,8 +12,7 @@
     "lint": "biome check .",
     "lint:fix": "biome check . --fix",
     "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish"
+    "changeset:version": "changeset version"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",

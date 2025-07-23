@@ -1,5 +1,13 @@
 # @typeonly/validator
 
+## 1.1.2
+
+### Patch Changes
+
+- Removed travis flag
+- Updated dependencies
+  - @typeonly/loader@1.1.2
+
 ## 1.1.1
 
 ### Patch Changes

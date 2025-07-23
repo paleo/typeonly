@@ -1,5 +1,11 @@
 # typeonly
 
+## 1.1.3
+
+### Patch Changes
+
+- Removed travis flag
+
 ## 1.1.2
 
 ### Patch Changes

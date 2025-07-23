@@ -1,5 +1,14 @@
 # @typeonly/validator-cli
 
+## 1.1.3
+
+### Patch Changes
+
+- Removed travis flag
+- Updated dependencies
+  - @typeonly/validator@1.1.2
+  - typeonly@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes

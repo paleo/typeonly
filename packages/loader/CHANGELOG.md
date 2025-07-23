@@ -1,5 +1,11 @@
 # @typeonly/loader
 
+## 1.1.2
+
+### Patch Changes
+
+- Removed travis flag
+
 ## 1.1.1
 
 ### Patch Changes

@@ -1,6 +1,5 @@
 # @typeonly/validator-cli
 
-[![Build Status](https://travis-ci.com/paleo/typeonly.svg?branch=master)](https://travis-ci.com/paleo/typeonly)
 [![npm](https://img.shields.io/npm/dm/@typeonly/validator-cli)](https://www.npmjs.com/package/@typeonly/validator-cli)
 ![Type definitions](https://img.shields.io/npm/types/@typeonly/validator-cli)
 ![GitHub](https://img.shields.io/github/license/paleo/typeonly)
