@@ -28,9 +28,9 @@
   "bin": "dist/cli.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paroi-tech/typeonly.git"
+    "url": "git+https://github.com/paleo/typeonly.git"
   },
-  "homepage": "https://github.com/paroi-tech/typeonly/tree/master/packages/validator-cli",
+  "homepage": "https://github.com/paleo/typeonly/tree/master/packages/validator-cli",
   "license": "CC0-1.0",
   "keywords": [
     "typescript",

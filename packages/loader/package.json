@@ -26,9 +26,9 @@
   "types": "dist/loader.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paroi-tech/typeonly.git"
+    "url": "git+https://github.com/paleo/typeonly.git"
   },
-  "homepage": "https://github.com/paroi-tech/typeonly/tree/master/packages/loader",
+  "homepage": "https://github.com/paleo/typeonly/tree/master/packages/loader",
   "license": "CC0-1.0",
   "keywords": [
     "typescript",

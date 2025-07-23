@@ -1,15 +1,15 @@
 # Monorepo for TypeOnly
 
-[![Build Status](https://travis-ci.com/paroi-tech/typeonly.svg?branch=master)](https://travis-ci.com/paroi-tech/typeonly)
+[![Build Status](https://travis-ci.com/paleo/typeonly.svg?branch=master)](https://travis-ci.com/paleo/typeonly)
 
-**TypeOnly** is a lightweight validation library that uses TypeScript type definitions to validate JSON data. **[Learn more about TypeOnly here](https://github.com/paroi-tech/typeonly/tree/master/packages/typeonly)**.
+**TypeOnly** is a lightweight validation library that uses TypeScript type definitions to validate JSON data. **[Learn more about TypeOnly here](https://github.com/paleo/typeonly/tree/master/packages/typeonly)**.
 
 ## Projects
 
-* [typeonly](https://github.com/paroi-tech/typeonly/tree/master/packages/typeonly): Parses types and interfaces from TypeScript and stores them as JSON files;
-* [@typeonly/loader](https://github.com/paroi-tech/typeonly/tree/master/packages/loader): Brings types and interfaces from TypeScript at runtime;
-* [@typeonly/validator](https://github.com/paroi-tech/typeonly/tree/master/packages/validator): An API to validate JSON data or JavaScript objects, using TypeScript typing definitions;
-* [@typeonly/validator-cli](https://github.com/paroi-tech/typeonly/tree/master/packages/validator-cli): A CLI to validate JSON files, using TypeScript typing definitions.
+* [typeonly](https://github.com/paleo/typeonly/tree/master/packages/typeonly): Parses types and interfaces from TypeScript and stores them as JSON files;
+* [@typeonly/loader](https://github.com/paleo/typeonly/tree/master/packages/loader): Brings types and interfaces from TypeScript at runtime;
+* [@typeonly/validator](https://github.com/paleo/typeonly/tree/master/packages/validator): An API to validate JSON data or JavaScript objects, using TypeScript typing definitions;
+* [@typeonly/validator-cli](https://github.com/paleo/typeonly/tree/master/packages/validator-cli): A CLI to validate JSON files, using TypeScript typing definitions.
 
 ## Contribute
 
