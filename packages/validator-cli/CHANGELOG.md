@@ -1,5 +1,14 @@
 # @typeonly/validator-cli
 
+## 1.1.2
+
+### Patch Changes
+
+- 3ee5c26: Updated documentation after moving the repository
+- Updated dependencies [3ee5c26]
+  - @typeonly/validator@1.1.1
+  - typeonly@1.1.2
+
 ## 1.1.1
 
 ### Patch Changes
