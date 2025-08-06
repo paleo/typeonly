@@ -1,22 +1,22 @@
 # TypeOnly Development Instructions
 
-Before starting any examination in the codebase, always read our [Onboarding Guide](_docs/Onboarding.md) ENTIRELY.
+Always read `_docs/Onboarding.md` ENTIRELY before anything else. Then, you MUST select the relevant _internal documentation_ files and read them ENTIRELY.
 
-## Instructions for drawing up an implementation plan
+## Internal Documentation
 
-As part of your implementation plan, you MUST select the relevant internal documentation file(s) and read them ENTIRELY.
+Most frequently consulted procedures:
 
-## Internal documentation
+- `_docs/Code Style Guidelines.md` - ALWAYS READ BEFORE CODING
+- `_docs/How to Upgrade All Dependencies.md`
 
-ALWAYS read BEFORE CODING:
+Additional documentation (read as needed):
 
-- [Code Style Guidelines](_docs/Code%20Style%20Guidelines.md)
-- [How to Upgrade All Dependencies](_docs/How%20to%20Upgrade%20All%20Dependencies.md)
+- `_docs/How to Write Unit Tests.md`
+- `_docs/Monorepo Overview.md`
 
-Here are documented procedures, read what you need:
+AI Workflow:
 
-- [How to Write a TIP](_docs/How%20to%20Write%20a%20TIP.md)
-
-Other documentation:
-
-- [Refactoring & Programming Principles](_docs/Refactoring%20%26%20Programming%20Principles.md) - How to apply SRP, DRY, YAGNI.
+- `_docs/ai-workflow/How to Write a Technical Specification.md` - For writing a **spec**
+- `_docs/ai-workflow/How to Write an Implementation Plan.md` - For writing a **plan**
+- `_docs/ai-workflow/Code Quality & Refactoring.md` - For **reviewing** code, ensuring **code quality**, **refactoring** by applying **SRP**, **DRY**, and **YAGNI** principles
+- `_docs/ai-workflow/AI Workflow Guide.md` - Needed by the other AI workflow documents

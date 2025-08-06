@@ -1,4 +1,4 @@
-# Copilot Instructions for TypeOnly
+# Onboarding Guide
 
 ## About TypeOnly
 
