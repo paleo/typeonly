@@ -1,1 +1,0 @@
-[Read these instructions](../CLAUDE.md)

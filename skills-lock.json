@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "docfront": {
+      "source": "paleo/docfront",
+      "sourceType": "github",
+      "computedHash": "85103a25022f769f62111c0f3a3de36d2041a3b1d52c31edb4c387c4b0b6b385"
+    }
+  }
+}
