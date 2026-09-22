@@ -5,7 +5,7 @@ import { execFileSync, execSync } from "node:child_process";
 import { copyFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { runWorkspace } from "@paleo/workspace";
+import { runWorkspace } from "@alignfirst/workspace";
 
 await runWorkspace({
   workspaceScript: fileURLToPath(import.meta.url),
