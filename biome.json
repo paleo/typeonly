@@ -54,6 +54,7 @@
   "files": {
     "includes": [
       "**/*.ts",
+      "**/*.mjs",
       "**/*.json",
       "!**/dist/**",
       "!**/node_modules/**",

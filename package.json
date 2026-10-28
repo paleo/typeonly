@@ -8,22 +8,17 @@
     "clear": "turbo clear",
     "build": "turbo build",
     "build:force": "turbo build --force",
-    "test": "turbo test",
+    "test": "npm run test:workspace && turbo test",
+    "test:workspace": "node --test scripts/workspace/*.test.mjs",
     "lint": "biome check .",
     "lint:fix": "biome check . --fix",
     "changeset": "changeset",
     "changeset:version": "changeset version",
-    "docmap": "docmap",
-    "workspace": "node scripts/workspace/workspace.mjs",
-    "plans:setup": "plans-share setup --folder typeonly",
-    "plans:sync": "plans-share sync"
+    "docmap": "npx -y alignfirst docmap"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@changesets/cli": "^2.29.5",
-    "@paleo/docmap": "~0.9.1",
-    "@paleo/plans-share": "~0.6.1",
-    "@alignfirst/workspace": "~0.34.0",
     "turbo": "^2.5.4"
   },
   "workspaces": [

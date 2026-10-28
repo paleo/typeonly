@@ -2,9 +2,9 @@
 
 Always ignore the `.local`, `.local-wt` and `.plans` directories when searching the codebase.
 
-## Docmap - Seek Documentation
+## Start every session with the project context
 
-*Before* any investigation or code exploration, run `npm run docmap`, then read the relevant documentation. Mandatory for every task.
+Run `npx -y alignfirst context` from the repository root as your first command, whatever the task. It prints the project conventions (ticket IDs, branch names, commits), the documentation map, and the AlignFirst protocols.
 
 ### Essential Documentation
 
@@ -17,20 +17,14 @@ Always read before any investigation or work:
 
 A **workspace** is a git worktree (with its branch) plus its own dev setup: symlinked shared directories and seeded config files. Workspaces are isolated, so you can work on several branches in parallel. This repository has no dev server, so the system runs portless: nothing to start, no `dev` script.
 
-Run `npm run workspace -- --guide` for the full procedures.
+Run `npx -y alignfirst workspace --guide` for the full procedures. Setup shares `.local` and the existing plans target, seeds VS Code settings, then runs `npm install` and `npm run build`.
 
-## AlignFirst - Ticket ID, Commit Message, Default Branch
+## Project conventions
 
-_Ticket ID:_ Format is numeric. Use the ticket ID if explicitly provided. Otherwise, deduce it from the current branch name (no confirmation needed). If the branch name is unavailable, get it via `git branch --show-current`. Only ask the user as a last resort.
-
-_Commit message convention:_ conventional commits, e.g. `feat: add validator option`. Do not mention the ticket ID.
-
-_Branch naming convention:_ `<type>/<ticket-id>` (e.g. `feat/12`), or `<type>/<slug>` when there is no ticket.
-
-_Default branch:_ `master`
+Settings in `alignfirst.json` define numeric tickets, conventional commits and the `master` default branch. Omit ticket IDs from commit messages. Without a ticket, name branches `<type>/<slug>`.
 
 ### Team Plans Repository
 
 In the main worktree, `.plans` is a symlink into a clone of the team plans repository (folder `typeonly/`). Plans are shared with the team through that repository and are never committed in this one.
 
-After every change in `.plans/`, synchronize the plans: `npm run plans:sync`.
+After every change in `.plans/`, synchronize the plans: `npx -y alignfirst sync`.

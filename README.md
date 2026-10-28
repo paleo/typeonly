@@ -23,9 +23,13 @@ wget https://www.antlr.org/download/antlr-4.13.2-complete.jar --directory-prefix
 
 # Install once all Node.js dependencies
 npm install
-mkdir .plans   # or use plans:setup if you have a team plans repository
-npm run workspace -- setup
+mkdir .plans   # local work files; keep an existing plans directory or symlink
+npx -y alignfirst workspace setup
 ```
+
+Workspace setup seeds VS Code settings and runs `npm install` and `npm run build`. It allocates no ports and starts no services. Read `npx -y alignfirst workspace --guide` for lifecycle procedures and [DEVELOPERS.md](DEVELOPERS.md) for the project workflow.
+
+For shared work files, use `npx -y alignfirst plans setup <plans-clone-path>` instead of creating `.plans`. The configured repository folder is `typeonly`. AlignFirst runs on demand without a project dependency; `npm install -g alignfirst` optionally provides the bare command.
 
 ### Development environment
 

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "conventions": {
+    "ticketIdPattern": "^\\d+$",
+    "git": {
+      "defaultBranch": "master",
+      "branchNameTemplate": "{type}/{TICKET_ID}",
+      "commit": { "style": "conventionalCommit" }
+    }
+  },
+  "plans": { "repositoryFolder": "typeonly", "autoArchive": true },
+  "developerInstructions": "DEVELOPERS.md",
+  "workspace": {
+    "sharedDirs": [".local"],
+    "gitignoredFiles": [
+      { "path": ".vscode/settings.json", "source": { "kind": "mainWorktree" }, "optional": true }
+    ],
+    "preSetup": [
+      { "name": "Seed main VS Code settings", "run": ["node", "scripts/workspace/prepare.mjs"] }
+    ],
+    "finalize": [
+      { "name": "Install dependencies", "run": ["npm", "install"] },
+      { "name": "Build packages", "run": ["npm", "run", "build"] }
+    ],
+    "summary": { "command": { "run": ["node", "scripts/workspace/summary.mjs"] } }
+  }
+}

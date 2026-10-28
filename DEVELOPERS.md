@@ -1,6 +1,6 @@
 # Developer Guide
 
-The everyday workflow of this repository. Run `npm run docmap` for the full documentation — `docs/build-system.md` details the Turbo task graph and the per-package scripts.
+Run `npx -y alignfirst context` at the start of each session for project conventions, documentation and protocols. `docs/build-system.md` details the Turbo task graph and per-package scripts.
 
 ## Stack and layout
 
@@ -10,7 +10,11 @@ An npm-workspaces monorepo of TypeScript packages, built with Turbo: `packages/t
 
 A workspace is a git worktree plus its setup: `.plans` and `.local` symlinked to the main worktree, `.vscode/settings.json` copied, then `npm install` and `npm run build`. This repository has no dev server, so the tooling runs portless: nothing to start, no `dev` script.
 
-Run `npm run workspace -- --guide` to learn the full procedures.
+Run `npx -y alignfirst workspace --guide` for the full procedures. Workspace setup installs and builds the packages without starting services.
+
+Prepare an ignored local `.plans` directory or retain the existing team-repository link before setup. `npx -y alignfirst plans check` validates it. Shared plans use the `typeonly/` folder; synchronize changes with `npx -y alignfirst sync`.
+
+External workspace owners retain responsibility for Git worktree deletion and must run `npx -y alignfirst workspace teardown` first.
 
 ## Conventions
 
@@ -27,5 +31,6 @@ Run `npm run workspace -- --guide` to learn the full procedures.
 | `npm test` | Run all tests (Turbo runs build first) |
 | `npm run lint` / `npm run lint:fix` | Check / fix with Biome |
 | `npm run docmap` | Browse the project documentation |
-| `npm run workspace -- <command>` | Manage worktree workspaces (`--guide` for the procedures) |
-| `npm run plans:sync` | Publish and retrieve the task plans (`.plans`) |
+| `npx -y alignfirst workspace <command>` | Manage worktree workspaces (`--guide` for the procedures) |
+| `npx -y alignfirst sync` | Publish and retrieve the task plans (`.plans`) |
+| `npm run test:workspace` | Test workspace preparation and summary scripts |
