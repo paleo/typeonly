@@ -45,8 +45,9 @@ The grammar step of `packages/typeonly` runs the ANTLR tool, a Java jar, and the
 
 ## Biome
 
-- `files.includes` in `biome.json` lists the checked file types: TypeScript, `.mjs` and JSON. A new Biome version that checks more file types by default, as 2.6 did with Markdown and YAML, changes nothing here.
-- Run `npm run lint:fix` after a Biome upgrade and review the result.
+- `files.includes` in `biome.json` lists the checked file types: TypeScript, `.mjs` and JSON. A new Biome version that checks more file types by default, as 2.6 did with Markdown and YAML, changes nothing here. When Markdown joins the list, exclude the files that tools write, such as `!**/CHANGELOG.md`, with negated globs.
+- Keep `"markdown": { "parser": { "frontmatter": true } }` in `biome.json`. Without it, Biome would break the YAML front matter of changesets and docs once it checks Markdown.
+- Run `npx biome migrate --write` after a Biome upgrade, then `npm run lint:fix`, and review the result.
 
 ## Pinned packages
 

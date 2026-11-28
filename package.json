@@ -17,9 +17,9 @@
     "docmap": "npx -y alignfirst docmap"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
-    "@changesets/cli": "^2.29.5",
-    "turbo": "^2.5.4"
+    "@biomejs/biome": "2.6.9",
+    "@changesets/cli": "^3.1.0",
+    "turbo": "^2.11.13"
   },
   "workspaces": [
     "packages/typeonly",

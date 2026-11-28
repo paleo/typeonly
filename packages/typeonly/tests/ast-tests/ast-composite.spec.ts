@@ -24,7 +24,8 @@ describe("AST Specification for Composite Types", () => {
 
     const t1 = composite.types[0] as AstInterface;
     expect(t1.whichType).toBe("interface");
-    const t1Prop = (t1.entries?.[0] as AstProperty).type as AstCompositeType;
+    const t1Entry = t1.entries?.[0] as AstProperty;
+    const t1Prop = t1Entry.type as AstCompositeType;
     expect(t1Prop).toEqual({
       whichType: "composite",
       op: "union",

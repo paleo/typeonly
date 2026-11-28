@@ -14,16 +14,16 @@
   },
   "dependencies": {
     "@typeonly/validator": "^1.1.2",
-    "command-line-args": "^6.0.1",
-    "command-line-usage": "^7.0.3",
+    "command-line-args": "^6.0.2",
+    "command-line-usage": "^7.0.4",
     "typeonly": "^1.1.3"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.2.3",
     "@types/command-line-usage": "^5.0.4",
     "@types/node": "^26.6.11",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.3"
+    "rimraf": "^6.1.4",
+    "typescript": "^7.0.2"
   },
   "bin": "dist/cli.js",
   "repository": {

@@ -93,8 +93,7 @@ export default class RtoModuleFactory {
     this.globals = new Set(
       options.defineGlobals ? options.defineGlobals(defaultGlobals) : defaultGlobals,
     );
-    if (ast.declarations)
-      ast.declarations.forEach((astDecl) => this.registerAstDeclaration(astDecl));
+    for (const astDecl of ast.declarations ?? []) this.registerAstDeclaration(astDecl);
   }
 
   hasExportedNamedType(name: string): boolean {

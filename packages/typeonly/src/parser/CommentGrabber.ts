@@ -257,7 +257,7 @@ export default class CommentGrabber {
   }
 
   private consumeTokens(tokens: AntlrToken[]) {
-    tokens.forEach((tok) => this.consumed.add(tok));
+    for (const tok of tokens) this.consumed.add(tok);
   }
 }
 

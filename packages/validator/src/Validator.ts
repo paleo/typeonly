@@ -96,7 +96,7 @@ export default class Validator {
     const module = this.modules[moduleName];
     if (!module) throw new Error(`Unknown module: ${moduleName}`);
     const namedType = module.namedTypes[typeName];
-    if (!namedType || !namedType.exported)
+    if (!namedType?.exported)
       throw new Error(`Module '${moduleName}' has no exported type: ${typeName}`);
     const result = this.checkType(namedType, val);
 
@@ -398,7 +398,7 @@ export default class Validator {
         () => "intersection type",
         context?.scope || scope,
       );
-      if (!result.valid && (!context || !context.interfaceScope.firstInvalid)) {
+      if (!result.valid && !context?.interfaceScope.firstInvalid) {
         const score = result.unmatchs[result.unmatchs.length - 1].score;
         result.unmatchs.push({ type, val, score });
         return result;

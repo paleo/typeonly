@@ -52,11 +52,11 @@ export default class InlineImportScanner {
   }
 
   private scanCompositeType(astNode: AstCompositeType) {
-    astNode.types.forEach((child) => this.scan(child));
+    for (const child of astNode.types) this.scan(child);
   }
 
   private scanGenericInstance(astNode: AstGenericInstance) {
-    astNode.parameterTypes.forEach((child) => this.scan(child));
+    for (const child of astNode.parameterTypes) this.scan(child);
   }
 
   private scanKeyofType(astNode: AstKeyofType) {
@@ -68,7 +68,7 @@ export default class InlineImportScanner {
   }
 
   private scanTupleType(astNode: AstTupleType) {
-    if (astNode.itemTypes) astNode.itemTypes.forEach((child) => this.scan(child));
+    for (const child of astNode.itemTypes ?? []) this.scan(child);
   }
 
   private scanFunctionType(astNode: AstFunctionType) {

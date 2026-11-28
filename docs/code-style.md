@@ -66,7 +66,7 @@ const TypeOnlyLexer = (await import("../../antlr-parser/TypeOnlyLexer.js" as str
 | `noParameterAssign` | error | Do not reassign function parameters |
 | `noInferrableTypes` | error | Don't annotate types that TS can infer |
 | `noUselessElse` | error | |
-| `useImportExtensions` | error | See above |
+| `useImportExtensions` | error | With `forceJsExtensions`, so the fix proposes `.js`, see above |
 | `noConstantCondition` | off | `while (true)` loops are allowed |
 | `noSwitchDeclarations` | off | |
 | `organizeImports` | off | Biome does not auto-sort imports |
