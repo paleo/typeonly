@@ -88,16 +88,9 @@ const optionDefinitions: OptionDefinition[] = [
   },
 ];
 
-cli().catch((error) => {
-  console.error(`Error: ${error.message}`);
-});
-
 async function cli() {
   const options = parseOptions();
-  if (!options) {
-    printHelp();
-    return;
-  }
+  if (!options) return;
 
   if (options.help) {
     printHelp();
@@ -110,6 +103,7 @@ async function cli() {
     if (error.causeCode === "invalidArgument") {
       console.error(`Error: ${error.message}`);
       printHelp();
+      process.exitCode = 1;
     } else throw error;
   }
 }
@@ -147,8 +141,9 @@ function parseOptions(): OptionsObject | undefined {
   try {
     return commandLineArgs(optionDefinitions);
   } catch (error: any) {
-    console.log(`Error: ${error.message}`);
+    console.error(`Error: ${error.message}`);
     printHelp();
+    process.exitCode = 1;
   }
 }
 
@@ -284,3 +279,8 @@ function validateBufferEncoding(s: string | undefined): asserts s is BufferEncod
   if (!s) return;
   if (!bufferEncodingValues.has(s)) throw new Error(`Invalid encoding value '${s}'`);
 }
+
+cli().catch((error) => {
+  console.error(`Error: ${error.message}`);
+  process.exitCode = 1;
+});
