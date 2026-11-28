@@ -6,7 +6,8 @@
     "moduleResolution": "nodenext",
     "sourceMap": false,
     "lib": ["esnext"],
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "include": ["."]
 }
