@@ -82,18 +82,13 @@ npm run build
 ```
 
 1. **`clear`** — Deletes `dist/`, `scripts/declarations/`, and `antlr-parser/`
-2. **`antlr`** — Runs ANTLR4 Java tool to regenerate `antlr-parser/*.js` from grammar files
+2. **`antlr`** — Runs `scripts/antlr.mjs`: the ANTLR4 Java tool regenerates `antlr-parser/*.js` from the grammar files
 3. **`tsc`** — Compiles TypeScript to `dist/`
 4. **`bundle-tsd`** — Runs `scripts/bundle-tsd.js` to merge `api.d.ts` + `rto.d.ts` + `ast.d.ts` into a single `dist/typeonly.d.ts`
 
 ### Prerequisites
 
-A **JVM** must be installed. The ANTLR JAR must be downloaded once into `packages/typeonly/`, where the `antlr` script resolves it:
-
-```bash
-# From the monorepo root
-wget https://www.antlr.org/download/antlr-4.13.2-complete.jar --directory-prefix packages/typeonly
-```
+A **JVM** must be installed. The ANTLR tool has the exact version of the `antlr4` runtime dependency. When `packages/typeonly/antlr-<version>-complete.jar` is missing, as in a fresh clone or worktree, the `antlr` script downloads it from `https://www.antlr.org/download/`. The jar is git-ignored.
 
 ## Common Modification Scenarios
 

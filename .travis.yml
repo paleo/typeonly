@@ -4,8 +4,6 @@ node_js:
 cache:
   directories:
     - "node_modules"
-before_install:
-  - wget https://www.antlr.org/download/antlr-4.13.2-complete.jar --directory-prefix typeonly
 # before_script:
 #   - npm run build
 env:
