@@ -18,7 +18,7 @@
     "@typeonly/loader": "^1.1.2"
   },
   "devDependencies": {
-    "@types/node": "^24.0.10",
+    "@types/node": "^26.6.11",
     "rimraf": "^6.0.1",
     "typeonly": "^1.1.3",
     "typescript": "^5.8.3",

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "Paroi Team",
   "private": true,
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.20.0",
   "scripts": {
     "clear": "turbo clear",
     "build": "turbo build",
