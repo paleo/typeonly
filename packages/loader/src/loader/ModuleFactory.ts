@@ -92,7 +92,7 @@ export default class ModuleFactory {
 
   getExportedNamedType(name: string): BaseNamedType {
     const namedType = this.namedTypes.get(name);
-    if (!namedType || !namedType.exported)
+    if (!namedType?.exported)
       throw new Error(`Module '${this.module.path}' has no exported member '${name}'`);
     return namedType;
   }

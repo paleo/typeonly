@@ -80,6 +80,7 @@ const optionDefinitions: OptionDefinition[] = [
 
 cli().catch((error) => {
   console.error(`Error: ${error.message}`, error);
+  process.exitCode = 1;
 });
 
 async function cli() {
@@ -96,6 +97,7 @@ async function cli() {
     if (error.causeCode === "invalidArgument") {
       console.error(`Error: ${error.message}`);
       printHelp();
+      process.exitCode = 1;
     } else throw error;
   }
 }
@@ -133,8 +135,9 @@ function parseOptions(): OptionsObject | undefined {
   try {
     return commandLineArgs(optionDefinitions);
   } catch (error: any) {
-    console.log(`Error: ${error.message}`);
+    console.error(`Error: ${error.message}`);
     printHelp();
+    process.exitCode = 1;
   }
 }
 
@@ -142,11 +145,11 @@ async function processFiles(options: OptionsObject) {
   if (options.ast) {
     if (!options.src || !Array.isArray(options.src))
       throw new InvalidArgumentError("Missing source file(s).");
-    options.src.map((file: string) => createAstJsonFile(file, options));
+    for (const file of options.src) await createAstJsonFile(file, options);
   } else await createRtoJsonFiles(options);
 }
 
-function createAstJsonFile(file: string, options: OptionsObject) {
+async function createAstJsonFile(file: string, options: OptionsObject) {
   const f = options["source-dir"] ? join(options["source-dir"] as string, file) : file;
   const encoding: BufferEncoding = (options.encoding as BufferEncoding) ?? "utf8";
   let source: string;
@@ -161,11 +164,13 @@ function createAstJsonFile(file: string, options: OptionsObject) {
     fileName = fileName.substring(0, fileName.length - (fileName.endsWith(".d.ts") ? 5 : 3));
 
   const ast: TypeOnlyAst = parseTypeOnly({ source });
-  const outFile = join(
-    (options["output-dir"] as string | undefined) ?? dirname(f),
-    `${fileName}.ast.json`,
+  const outputDir = (options["output-dir"] as string | undefined) ?? dirname(f);
+  await ensureDirectory(outputDir, { createIntermediate: true });
+  writeFileSync(
+    join(outputDir, `${fileName}.ast.json`),
+    JSON.stringify(ast, undefined, "\t"),
+    encoding,
   );
-  writeFileSync(outFile, JSON.stringify(ast, undefined, "\t"), encoding);
 }
 
 async function createRtoJsonFiles(options: OptionsObject) {

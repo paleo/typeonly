@@ -6,8 +6,10 @@
     "moduleResolution": "nodenext",
     "sourceMap": false,
     "lib": ["esnext"],
+    "types": ["node"],
     "esModuleInterop": true,
     "outDir": "dist",
+    "rootDir": "src",
     "noEmitOnError": true,
     "declaration": false
   },

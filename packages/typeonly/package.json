@@ -5,7 +5,7 @@
   "author": "Paroi",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build && npm run test",
-    "antlr": "java -cp \"antlr-4.13.2-complete.jar\" org.antlr.v4.Tool -Dlanguage=JavaScript -o antlr-parser TypeOnlyParser.g4 TypeOnlyLexer.g4",
+    "antlr": "node scripts/antlr.mjs",
     "clear": "rimraf dist/* scripts/declarations/* antlr-parser/*",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
@@ -17,16 +17,16 @@
   },
   "dependencies": {
     "antlr4": "4.13.2",
-    "command-line-args": "^6.0.1",
-    "command-line-usage": "^7.0.3"
+    "command-line-args": "^6.0.2",
+    "command-line-usage": "^7.0.4"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.2.3",
     "@types/command-line-usage": "^5.0.4",
-    "@types/node": "^24.0.10",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "@types/node": "^26.6.11",
+    "rimraf": "^6.1.4",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.2"
   },
   "type": "module",
   "main": "dist/api.js",

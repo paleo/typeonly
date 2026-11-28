@@ -6,7 +6,9 @@
     "moduleResolution": "nodenext",
     "sourceMap": false,
     "lib": ["esnext"],
+    "types": ["node"],
     "outDir": "dist",
+    "rootDir": "src",
     "noEmitOnError": true,
     "declaration": true,
     "declarationDir": "scripts/declarations"

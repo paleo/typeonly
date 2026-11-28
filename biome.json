@@ -5,10 +5,15 @@
       "unsafeParameterDecoratorsEnabled": true
     }
   },
+  "markdown": {
+    "parser": {
+      "frontmatter": true
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
         "noExplicitAny": "off"
       },
@@ -27,7 +32,7 @@
         "noConstantCondition": "off",
         "noSwitchDeclarations": "off",
         "useExhaustiveDependencies": "off",
-        "useImportExtensions": "error",
+        "useImportExtensions": { "level": "error", "options": { "forceJsExtensions": true } },
         "useValidTypeof": "off"
       },
       "style": {
@@ -56,11 +61,17 @@
       "**/*.ts",
       "**/*.mjs",
       "**/*.json",
-      "!**/dist/**",
-      "!**/node_modules/**",
-      "!**/scripts/declarations/**"
+      "!**/dist",
+      "!**/node_modules",
+      "!**/scripts/declarations"
     ]
   },
+  "overrides": [
+    {
+      "includes": ["scripts/workspace/**"],
+      "linter": { "rules": { "suspicious": { "noUndeclaredEnvVars": "off" } } }
+    }
+  ],
   "vcs": {
     "enabled": true,
     "clientKind": "git",

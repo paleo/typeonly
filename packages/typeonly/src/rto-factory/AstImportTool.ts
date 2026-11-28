@@ -59,7 +59,7 @@ export default class AstImportTool {
           namedMembers,
         });
       }
-      namespaces.forEach((asNamespace) => namespacedImports.push({ from, asNamespace }));
+      for (const asNamespace of namespaces) namespacedImports.push({ from, asNamespace });
     }
     const result: { imports?: RtoImport[]; namespacedImports?: RtoNamespacedImport[] } = {};
     if (imports.length > 0) result.imports = imports;

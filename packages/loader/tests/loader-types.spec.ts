@@ -595,7 +595,7 @@ describe("Loader Specification for Types", () => {
     ]);
   });
 
-  test("ArrayType", async () => {
+  test("ArrayType without doc comment or generic", async () => {
     const source = `
         export type T1 = number[]
       `;

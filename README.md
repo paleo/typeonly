@@ -13,14 +13,11 @@
 
 ### Install and Build
 
-We need a JVM (Java Virtual Machine) to build the parser because we use [ANTLR](https://www.antlr.org/), which is a Java program. So, at first, install a JVM on your system.
+We need a JVM (Java Virtual Machine) to build the parser because we use [ANTLR](https://www.antlr.org/), which is a Java program. So, at first, install a JVM on your system. The build downloads the ANTLR JAR file into `packages/typeonly/` when it is missing.
 
 In a terminal, open the cloned `typeonly/typeonly/` repository. Then:
 
 ```sh
-# Download once the ANTLR JAR file into the `packages/typeonly/` directory
-wget https://www.antlr.org/download/antlr-4.13.2-complete.jar --directory-prefix packages/typeonly
-
 # Install once all Node.js dependencies
 npm install
 mkdir .plans   # local work files; keep an existing plans directory or symlink

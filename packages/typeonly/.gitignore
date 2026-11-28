@@ -9,7 +9,7 @@ package-lock.json
 /scripts/declarations
 
 /.antlr
-/antlr-*.jar
+/antlr-*.jar*
 antlr-parser
 
 !/tests/import-tests/**/node_modules

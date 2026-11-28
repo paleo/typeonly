@@ -32,7 +32,8 @@ type T1 = {a: A}[]
     expect(type.genericSyntax).toBe(undefined);
     const itemType = type.itemType as AstInterface;
     expect(itemType.whichType).toBe("interface");
-    expect((itemType.entries?.[0] as AstProperty).name).toBe("a");
+    const prop = itemType.entries?.[0] as AstProperty;
+    expect(prop.name).toBe("a");
   });
 
   test("array with a function", () => {
